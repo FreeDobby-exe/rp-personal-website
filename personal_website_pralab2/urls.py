@@ -18,5 +18,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('first-app/', include('apps.hello_world.urls')),
+
+	# Adding hello_world App URLS to the project on the root path ('/')
+	# path(website path, include(path to the urls app file))
+	path('', include('apps.hello_world.urls')),
 ]
